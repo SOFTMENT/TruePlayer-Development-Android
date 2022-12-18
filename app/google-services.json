@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "363668707902",
+    "project_id": "trueplayer-development",
+    "storage_bucket": "trueplayer-development.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363668707902:android:af1c7a8f5fef758b548f6f",
+        "android_client_info": {
+          "package_name": "in.softment.trueplayerdevelopment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363668707902-a5839c7rq176n05gd8mf0h25onl4k20l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKsq4YVk0DAGupSUMUTGZxO6I6HV7vf7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363668707902-a5839c7rq176n05gd8mf0h25onl4k20l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

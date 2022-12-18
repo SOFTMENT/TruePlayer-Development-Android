@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/background_color"
     tools:context=".Fragment.TrainingPlanFragment">
@@ -61,7 +64,309 @@
         android:layout_height="match_parent"
         >
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_rr"
+            >
+            <TextView
+                android:textSize="13sp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly Hours"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montmedium"
+                android:textColor="@color/dark_color"
+                android:id="@+id/weeklyHours"
+                />
+            <TextView
+
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/weeklyHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 Hours"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montbold"
+                android:textColor="@color/dark_color"
+                />
+            <TextView
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start From"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/montmedium"
+                android:textColor="@color/dark_color"
+                android:id="@+id/startFrom"
+                />
+
+            <TextView
+                android:id="@+id/startFromDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/startFrom"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/montbold"
+                android:text="23-April-2022"
+
+                android:textColor="@color/dark_color" />
+
+            <LinearLayout
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/startFromDate"
+                android:orientation="vertical"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edittext_back"
+                    >
+                    <LinearLayout
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/bs1"
+                            android:textColor="@color/dark_color"
+                            android:fontFamily="@font/montsemibold"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Basic Skills"
+
+                            />
+                        <TextView
+                            android:textColor="@color/light_gray"
+                            android:fontFamily="@font/montmedium"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 Videos"
+                            android:layout_marginTop="4dp"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/main_color"
+                        android:fontFamily="@font/montbold"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 Hours"
+
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edittext_back"
+                    >
+                    <LinearLayout
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:textColor="@color/dark_color"
+                            android:fontFamily="@font/montsemibold"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ball Mastery"
+
+                            />
+                        <TextView
+                            android:textColor="@color/light_gray"
+                            android:fontFamily="@font/montmedium"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 Videos"
+                            android:layout_marginTop="4dp"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/main_color"
+                        android:fontFamily="@font/montbold"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 Hours"
+
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edittext_back"
+                    >
+                    <LinearLayout
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:textColor="@color/dark_color"
+                            android:fontFamily="@font/montsemibold"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Elite Drill"
+
+                            />
+                        <TextView
+                            android:textColor="@color/light_gray"
+                            android:fontFamily="@font/montmedium"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 Videos"
+                            android:layout_marginTop="4dp"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/main_color"
+                        android:fontFamily="@font/montbold"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 Hours"
+
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edittext_back"
+                    >
+                    <LinearLayout
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:textColor="@color/dark_color"
+                            android:fontFamily="@font/montsemibold"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Foot Speed"
+
+                            />
+                        <TextView
+                            android:textColor="@color/light_gray"
+                            android:fontFamily="@font/montmedium"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 Videos"
+                            android:layout_marginTop="4dp"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/main_color"
+                        android:fontFamily="@font/montbold"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 Hours"
+
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/edittext_back"
+                    >
+                    <LinearLayout
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:textColor="@color/dark_color"
+                            android:fontFamily="@font/montsemibold"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Attacking Moves"
+
+                            />
+                        <TextView
+                            android:textColor="@color/light_gray"
+                            android:fontFamily="@font/montmedium"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 Videos"
+                            android:layout_marginTop="4dp"
+                            />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginEnd="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/main_color"
+                        android:fontFamily="@font/montbold"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 Hours"
+
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
         <LinearLayout
+            android:visibility="gone"
             android:id="@+id/no_weekly_plan_available_ll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,7 +392,6 @@
 
     </RelativeLayout>
 
-
-
-
 </LinearLayout>
+
+</ScrollView>

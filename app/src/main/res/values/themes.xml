@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.TruePlayerDevelopment" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.MyBreedersStore" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/neon_green</item>
+        <item name="colorPrimary">@color/background_color</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -42,14 +42,14 @@
         <item name="android:background">@drawable/sheet_background</item>
     </style>
 
-    <style name="Theme.TruePlayerDevelopment.NoActionBar">
+    <style name="Theme.MyBreedersStore.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.TruePlayerDevelopment.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.MyBreedersStore.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.TruePlayerDevelopment.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.MyBreedersStore.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

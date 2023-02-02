@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/background_color"
     tools:context=".SignUpActivity">
 
 
@@ -25,69 +25,51 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
-            android:src="@drawable/leftarrow" />
+            android:src="@drawable/baseline_arrow_back_ios_new_24" />
     </androidx.cardview.widget.CardView>
 
 
-    <TextView
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        app:riv_corner_radius="32dp"
+        android:id="@+id/topImage"
+        android:padding="20dp"
+        android:backgroundTint="@color/main_color"
+        android:background="@drawable/circle_back"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/account_log_in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:fontFamily="@font/montbold"
-        android:text="Create An Account"
-        android:textColor="#000000"
-        android:textSize="18sp" />
-    <FrameLayout
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/account_log_in"
-        android:id="@+id/frame"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="24dp">
-
-        <ImageView
-
-            android:id="@+id/user_profile"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:src="@drawable/profile_placeholder" />
-
-        <ImageView
-
-
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:background="@drawable/circle_back"
-
-            android:src="@drawable/circleimageview" />
-
-    </FrameLayout>
+        android:layout_marginTop="32dp"
+        android:src="@drawable/paw" />
 
     <TextView
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/frame"
-        android:id="@+id/taptochange"
+
+        android:id="@+id/registerLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/montmedium"
-        android:text="Tap to Change"
-        android:textColor="@color/link"
-        android:textSize="12sp" />
+        android:layout_below="@+id/topImage"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/interbold"
+        android:text="Registration"
+        android:textColor="@color/dark_black"
+        android:textSize="17sp" />
+
+
+
+
     <EditText
 
         android:id="@+id/fullName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/taptochange"
+        android:layout_below="@+id/registerLabel"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/edittext_back"
-        android:fontFamily="@font/montmedium"
-        android:hint="Enter Full Name"
+        android:fontFamily="@font/intermedium"
+        android:hint="Full Name"
         android:inputType="textPersonName"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
@@ -102,8 +84,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/edittext_back"
-        android:fontFamily="@font/montmedium"
-        android:hint="Enter Email"
+        android:fontFamily="@font/intermedium"
+        android:hint="Email Address"
         android:inputType="textEmailAddress"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
@@ -120,40 +102,12 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/edittext_back"
 
-        android:fontFamily="@font/montsemibold"
-        android:hint="Enter Password"
+        android:fontFamily="@font/intersemibold"
+        android:hint="Password"
         android:inputType="textPassword"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textSize="12sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:text="Enter Club / Team Name (Optional)"
-        android:fontFamily="@font/montsemibold"
-        android:textSize="13sp"
-        android:textColor="@color/black"
-        android:id="@+id/enterClubTV"
-        />
-    <EditText
-
-        android:id="@+id/clubName"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/enterClubTV"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/edittext_back"
-        android:fontFamily="@font/montmedium"
-        android:inputType="textPersonName"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:textSize="12sp" />
-
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -161,21 +115,21 @@
         android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/clubName"
+        android:layout_below="@+id/password"
         android:layout_marginStart="20dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/btn_back"
-        android:backgroundTint="@color/neon_green"
-        android:fontFamily="@font/montsemibold"
-        android:text="Register"
+        android:backgroundTint="@color/btn_color"
+        android:fontFamily="@font/intersemibold"
+        android:text="Sign Up"
         android:textAllCaps="false"
         android:textColor="@color/white" />
     <LinearLayout
+        android:layout_below="@+id/register"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="16dp"
+
+        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -185,7 +139,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/montregular"
+            android:fontFamily="@font/interregular"
             android:text="Already have an account?"
             android:textColor="@color/light_gray"
             android:textSize="12sp" />
@@ -198,7 +152,7 @@
             android:layout_marginStart="4dp"
             android:textColor="@color/link"
             android:textSize="12sp"
-            android:fontFamily="@font/montbold"
+            android:fontFamily="@font/interbold"
             />
     </LinearLayout>
 </RelativeLayout>

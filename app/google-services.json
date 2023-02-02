@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "363668707902",
-    "project_id": "trueplayer-development",
-    "storage_bucket": "trueplayer-development.appspot.com"
+    "project_number": "735129287290",
+    "project_id": "dog-breeder",
+    "storage_bucket": "dog-breeder.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:363668707902:android:af1c7a8f5fef758b548f6f",
+        "mobilesdk_app_id": "1:735129287290:android:ce50615cbf9827d85e99c3",
         "android_client_info": {
-          "package_name": "in.softment.trueplayerdevelopment"
+          "package_name": "in.softment.dogbreedersstore"
         }
       },
       "oauth_client": [
         {
-          "client_id": "363668707902-a5839c7rq176n05gd8mf0h25onl4k20l.apps.googleusercontent.com",
+          "client_id": "735129287290-n2v7nnf8d1tk7qghlgqvb627bk5ee4qp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDKsq4YVk0DAGupSUMUTGZxO6I6HV7vf7o"
+          "current_key": "AIzaSyCkY8oOHKyTLhB-cz1XEZkVW1TdDWduwbM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "363668707902-a5839c7rq176n05gd8mf0h25onl4k20l.apps.googleusercontent.com",
+              "client_id": "735129287290-n2v7nnf8d1tk7qghlgqvb627bk5ee4qp.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "735129287290-6lvmkocm1hausoc3e79jtad4sc1q9op2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "in.softment.Dog-Breeder"
+              }
             }
           ]
         }

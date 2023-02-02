@@ -6,7 +6,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <in.softment.trueplayerdevelopment.Util.NonSwipeAbleViewPager
+    <in.softment.dogbreedersstore.Util.NonSwipeAbleViewPager
         android:background="#fafafa"
         android:id="@+id/viewpager"
         android:layout_above="@+id/line"
@@ -27,10 +27,10 @@
         android:layout_width="match_parent"
         android:layout_height="62dp"
         android:layout_alignParentBottom="true"
-        android:background="#FAFAFA"
+        android:background="@color/background_color"
         app:tabGravity="fill"
         app:tabIconTint="@color/tab_layout"
-        app:tabIndicator="@color/neon_green"
+        app:tabIndicator="@color/background_color"
         app:tabMode="fixed"
         app:tabRippleColor="@android:color/transparent"
 

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:fontFamily="@font/montbold"
+        android:fontFamily="@font/interbold"
         android:textColor="#000000"
         android:text="ERROR"
         />
@@ -25,7 +25,7 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:textSize="12sp"
-        android:fontFamily="@font/montmedium"
+        android:fontFamily="@font/intermedium"
         android:textAlignment="center"
         android:text="Failed to deposit money in wallet, But don't worry we have received your request and we will update your wallet manually within 1 hour"
         />
@@ -35,14 +35,14 @@
         android:layout_width="110dp"
         android:layout_height="36dp"
         android:layout_marginTop="16dp"
-        app:cardBackgroundColor="@color/main_color"
+        app:cardBackgroundColor="@color/btn_color"
         >
         <TextView
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="13sp"
-            android:fontFamily="@font/montmedium"
+            android:fontFamily="@font/intermedium"
             android:textColor="@color/white"
             android:text="OK"
             />

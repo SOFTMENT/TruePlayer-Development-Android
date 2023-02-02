@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_color"
     android:scrollbars="none"
-    android:background="@color/white"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout
-    android:background="@color/white"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-        android:background="@color/white"
+
     tools:context=".Fragment.HomeFragment">
 
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/profileImageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+    <LinearLayout
+        android:id="@+id/locationLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        app:riv_corner_radius="12dp"
-        android:src="@drawable/profile_placeholder"
-        />
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="60dp"
-    android:layout_toEndOf="@+id/profileImageView"
-    android:layout_marginTop="24dp"
-    android:layout_marginStart="12dp"
-    android:gravity="center_vertical"
-    android:orientation="vertical"
-    >
-    <TextView
-        android:id="@+id/fullName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hi Vijay Rathore"
-        android:fontFamily="@font/montsemibold"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:layout_marginBottom="3dp"
-        />
-    <TextView
-        android:id="@+id/todayDate"
-        android:layout_marginTop="3dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mon, 24 Apr 2022"
-        android:fontFamily="@font/montregular"
-        android:textColor="@color/light_gray"
-        android:textSize="13sp"
-        />
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:fontFamily="@font/intermedium"
+            android:textSize="11sp"
+            android:textColor="@color/dark_gray"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
 
-</LinearLayout>
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City,"
+                android:textSize="14sp"
+                android:fontFamily="@font/intersemibold"
+                android:textColor="@color/black"
+                android:id="@+id/city"
+                />
+            <TextView
+                android:layout_marginStart="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COUNTRY"
+                android:textSize="13sp"
+                android:fontFamily="@font/intermedium"
+                android:textColor="@color/dark_gray"
+                android:id="@+id/country"
+                />
+        </LinearLayout>
+    </LinearLayout>
     <androidx.cardview.widget.CardView
-        android:layout_alignParentEnd="true"
-        android:id="@+id/newsandupdate"
+        android:layout_toStartOf="@+id/notification"
+        android:id="@+id/fav"
         android:layout_width="36dp"
         android:layout_height="36dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
         app:cardCornerRadius="8dp"
         app:cardElevation="2dp">
 
@@ -73,407 +73,253 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
-            android:src="@drawable/notification"
-            app:tint="@color/light_gray" />
+            android:src="@drawable/baseline_favorite_border_24" />
     </androidx.cardview.widget.CardView>
-
-</RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <TextView
-            android:id="@+id/dailyMotivationTV"
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="3dp"
-            android:fontFamily="@font/montsemibold"
-            android:text="Daily Motivation"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="16dp"
-            android:orientation="vertical"
-            android:id="@+id/newvideoLL"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Video Unlock"
-                android:fontFamily="@font/montregular"
-                android:textColor="@color/light_gray"
-                android:textSize="10sp"
-                />
-            <TextView
-                android:id="@+id/newVideoTV"
-                android:layout_marginTop="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3d 23h 29m"
-                android:fontFamily="@font/montmedium"
-                android:textColor="@color/black"
-                android:textSize="13sp"
-                android:layout_marginBottom="3dp"
-                />
-        </LinearLayout>
-
-        <TextView
-            android:layout_centerVertical="true"
-            android:id="@+id/appPreview"
-            android:layout_marginEnd="20dp"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:background="@drawable/btn_back"
-
-            android:layout_alignParentEnd="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="App Preview"
-            android:textSize="11sp"
-            android:fontFamily="@font/montmedium"
-            android:textColor="@color/light_gray"
-
-            />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_marginStart="20dp"
+    <androidx.cardview.widget.CardView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/notification"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="12dp"
-        >
-        <com.makeramen.roundedimageview.RoundedImageView
-            app:riv_corner_radius="8dp"
-            android:scaleType="centerCrop"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:src="@drawable/statusback"
-            />
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="#19222020"
-            />
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:elevation="4dp"
-            android:fontFamily="@font/montmedium"
-            android:lineSpacingExtra="2dp"
-            android:text="I don't care what people think or say about me, and I was not born on this earth to please everybody."
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="13sp" />
-    </RelativeLayout>
 
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/outline_notifications_24" />
+    </androidx.cardview.widget.CardView>
 
-    <HorizontalScrollView
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:backgroundTint="@color/main_color"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="90dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/locationLL"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_back"
+        android:src="@drawable/mybreedersstore"
+        android:id="@+id/headerImage"
+        />
+    
+    <HorizontalScrollView
+        android:id="@+id/horizontalScroll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:scrollbars="none"
-
-        >
-    <LinearLayout
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="4dp"
+        android:layout_below="@+id/headerImage"
+        android:layout_marginTop="12dp"
         >
         <LinearLayout
-            android:id="@+id/basicSkills"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_width="84dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_back"
-
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
             >
-
-            <TextView
-
-                android:maxLines="2"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
+            <androidx.cardview.widget.CardView
+                app:cardElevation="2dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Basic\nSkills"
-                android:fontFamily="@font/montmedium"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:layout_marginBottom="2dp"
-                />
-            <TextView
-                android:id="@+id/basicSkillsCount"
-                android:layout_marginBottom="12dp"
-                android:textColor="#959595"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="20dp"
+                app:cardBackgroundColor="@color/btn_color"
+                app:cardCornerRadius="8dp"
+                >
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_back"
+                    android:text="Pups For Sale"
+                    android:paddingStart="10dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/intermedium"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:paddingEnd="10dp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="2dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0 Videos"
-                android:fontFamily="@font/montregular"
-                android:textSize="10sp"
-                android:textAlignment="center"
+                android:layout_height="32dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                >
 
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ballMastery"
-            android:layout_marginStart="4dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_width="84dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_back"
-            >
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_back"
+                    android:fontFamily="@font/intermedium"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Upcoming Litters"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_black"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-
-                android:maxLines="2"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
+            <androidx.cardview.widget.CardView
+                app:cardElevation="2dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ball\nMastery"
-                android:fontFamily="@font/montmedium"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:layout_marginBottom="2dp"
-                />
-            <TextView
-                android:id="@+id/ballMasteryCount"
-                android:layout_marginBottom="12dp"
-                android:textColor="#959595"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0 Videos"
-                android:fontFamily="@font/montregular"
-                android:textSize="10sp"
-                android:textAlignment="center"
+                android:layout_height="32dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                >
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_back"
+                    android:text="Stud Profiles"
+                    android:paddingStart="10dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/intermedium"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_black"
+                    android:paddingEnd="10dp"
+                    />
+            </androidx.cardview.widget.CardView>
 
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/eliteDrill"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_width="84dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_back"
-            >
-
-            <TextView
-                android:maxLines="2"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
+            <androidx.cardview.widget.CardView
+                app:cardElevation="2dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Elite\nDrill"
-                android:fontFamily="@font/montmedium"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:layout_marginBottom="2dp"
-                />
-            <TextView
-                android:id="@+id/eliteDrillCount"
-                android:layout_marginBottom="12dp"
-                android:textColor="#959595"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0 Videos"
-                android:fontFamily="@font/montregular"
-                android:textSize="10sp"
-                android:textAlignment="center"
-
-                />
+                android:layout_height="32dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="8dp"
+                >
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_back"
+                    android:text="Adoption Profiles"
+                    android:paddingStart="10dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/intermedium"
+                    android:textAllCaps="false"
+                    android:textColor="@color/dark_black"
+                    android:paddingEnd="10dp"
+                    />
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/footSpeed"
-            android:layout_marginEnd="4dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_width="84dp"
-            android:layout_height="wrap_content"
-
-            android:background="@drawable/edittext_back"
-            >
-
-            <TextView
-                android:maxLines="2"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Foot\nSpeed"
-                android:fontFamily="@font/montmedium"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:layout_marginBottom="2dp"
-                />
-            <TextView
-                android:id="@+id/footSpeedCount"
-                android:layout_marginBottom="12dp"
-                android:textColor="#959595"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0 Videos"
-                android:fontFamily="@font/montregular"
-                android:textSize="10sp"
-                android:textAlignment="center"
-
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/attackingMoves"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_width="84dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_back"
-            >
-
-            <TextView
-                android:maxLines="2"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Attacking\nMoves"
-                android:fontFamily="@font/montmedium"
-                android:textSize="12sp"
-                android:textAlignment="center"
-                android:layout_marginBottom="2dp"
-                />
-            <TextView
-                android:id="@+id/attackingMovesCount"
-                android:layout_marginBottom="12dp"
-                android:textColor="#959595"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0 Videos"
-                android:fontFamily="@font/montregular"
-                android:textSize="10sp"
-                android:textAlignment="center"
-                />
-        </LinearLayout>
-    </LinearLayout>
     </HorizontalScrollView>
 
     <RelativeLayout
+        android:id="@+id/filterRR"
+        android:layout_marginTop="4dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_vertical"
+        android:layout_height="50dp"
+        android:layout_below="@+id/horizontalScroll"
         >
         <TextView
-           android:id="@+id/yourTrainingTV"
+            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Highlights"
-            android:fontFamily="@font/montsemibold"
+            android:text="Categories"
+            android:layout_marginStart="20dp"
             android:textColor="@color/black"
+            android:fontFamily="@font/intersemibold"
             android:textSize="16sp"
-
             />
-        <TextView
+        <androidx.cardview.widget.CardView
             android:layout_alignParentEnd="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0 founds"
-            android:fontFamily="@font/montmedium"
-            android:textColor="@color/light_gray"
-            android:textSize="13sp"
-            android:id="@+id/totalHightlightVideos"
+            android:id="@+id/filter"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:background="#fff"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp">
 
-            />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        >
-        <LinearLayout
-            android:id="@+id/no_highlights_available_ll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="120dp"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            >
             <ImageView
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:src="@drawable/movie"
-                />
-            <TextView
-                android:layout_marginTop="6dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No highlights available"
-                android:fontFamily="@font/montmedium"
-                android:textColor="@color/light_gray"
-                android:textSize="13sp"
-                />
-        </LinearLayout>
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:nestedScrollingEnabled="false"
-            android:id="@+id/recyclerview"
-            android:scrollbars="none"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            />
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/filter" />
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/searchRR"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/filterRR"
+        >
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:lines="1"
+        android:hint="Search"
+        android:fontFamily="@font/intermedium"
+        android:textSize="13sp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/edittext_back"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/dropDown"
+        android:id="@+id/breedAutoTV"
+        />
+        <androidx.cardview.widget.CardView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/dropDown"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:background="#fff"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp">
 
+            <ImageView
 
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_keyboard_arrow_down_24" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
-</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/searchRR"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:id="@+id/recyclerview"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No items available"
+        android:layout_below="@+id/searchRR"
+        android:fontFamily="@font/intermedium"
+        android:textSize="13sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:id="@+id/no_items_available"
+        />
+</RelativeLayout>
+
 
 </ScrollView>
